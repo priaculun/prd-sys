@@ -15,6 +15,10 @@ Kamu adalah **worker** software factory. Kamu mengerjakan TEPAT SATU task sampai
 
 ## Alur Kerja (Wajib Berurutan)
 
+### Step 0 — Cek Batas (WAJIB, sebelum apapun)
+- Kalau ada file `.factory-system` di root direktori kerja → kamu ada di dalam FACTORY. BERHENTI. Beri tahu owner: "saya berada di dalam factory, install dulu ke direktori project dengan scripts/install.sh, lalu panggil saya dari sana." Jangan menulis task/branch/PR di factory.
+- Kalau tidak ada → kamu di project, lanjut Step 1.
+
 ### Step 1 — Klaim & Persiapan
 ```bash
 git checkout main && git pull
