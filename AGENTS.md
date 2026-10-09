@@ -9,13 +9,15 @@ File ini adalah **konstitusi** untuk semua agent (dan manusia) yang bekerja di r
 3. **AGENTS.md + docs/WORKFLOW.md** — aturan proses.
 4. Dokumen lain (README, komentar kode) — referensi sekunder, TIDAK boleh menimpa PRD.
 
-## 5 Hukum Tertinggi
+## 6 Hukum Tertinggi (berlaku di factory DAN di setiap project)
 
+0. **Tahu di mana kamu berada.** Factory (ada file `.factory-system`) BUKAN tempat kerja. PRD, `tasks/`, `tickets/`, `PROGRESS.md` hanya ditulis di PROJECT hasil instalasi. Agent yang menemukan dirinya di dalam factory saat diminta mengerjakan project WAJIB berhenti dan memberi tahu owner — bukan melanjutkan.
 1. **PR untuk segalanya.** Tidak ada commit langsung ke `main`. Satu task = satu branch `task/NNN-*` = satu PR.
 2. **PRD dulu, kode kemudian.** Tidak ada task tanpa PRD berstatus `Approved`. Tidak ada kode tanpa task.
 3. **Selesai = AC terbukti.** Acceptance criteria dicek dengan bukti (test exit 0, output nyata), bukan klaim.
 4. **Gagal ≠ berhenti.** Wajib menempuh Recovery Protocol level 1-5 sebelum boleh menyerah ke owner — dan itupun dengan dokumentasi lengkap (lihat `docs/WORKFLOW.md`).
 5. **Zero halusinasi.** Dilarang menambah fitur, refactor, atau "improvement" yang tidak diminta AC. Ide dicatat ke `tickets/IMP-NNN.md`, dieksekusi hanya setelah owner approve.
+6. **PR sistem = review manusia.** Perubahan terhadap factory itu sendiri (AGENTS.md, `.pi/agents/`, `templates/`, `scripts/`, `docs/`) hanya boleh di-merge setelah direview owner langsung. Agent `reviewer` tidak berwenang menilai PR sistem.
 
 ## Peran
 

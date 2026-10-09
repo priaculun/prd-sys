@@ -1,0 +1,11 @@
+# MARKER: direktori ini adalah FACTORY (sistem), BUKAN project.
+
+Aturan untuk semua agent yang membaca file ini:
+- JANGAN menulis PRD.md, tasks/, tickets/, atau PROGRESS.md di direktori ini.
+- Direktori ini hanya berisi MESIN (template, aturan, agent, installer) —
+  mesin yang read-only kecuali diubah eksplisit oleh owner via PR sistem.
+- Kalau kamu diminta mengerjakan PROJECT (bikin PRD / kerjakan task):
+  BERHENTI, beri tahu owner bahwa kamu berada di dalam factory,
+  dan minta owner menjalankan installer dulu: scripts/install.sh <dir-project>
+  lalu panggil kamu dari direktori project tersebut.
+- Detail lengkap: baca docs/WORKFLOW.md bagian "Batas Sistem vs Project".

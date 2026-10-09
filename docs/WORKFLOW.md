@@ -2,6 +2,22 @@
 
 Alur lengkap dari ide sampai kode ter-merge. Semua perubahan lewat PR. Semua fase punya aturan main di `AGENTS.md` dan definisi agent di `.pi/agents/`.
 
+## Batas Sistem vs Project
+
+JANGAN TERTUKAR — ini sumber bug paling umum:
+
+| | FACTORY (repo ini) | PROJECT |
+|---|---|---|
+| Tanda | ada file `.factory-system` di root | tidak ada file itu |
+| Isi | Aturan, template, agent, installer | PRD, tasks/, tickets/, PROGRESS.md, kode |
+| Peran agent | TIDAK BEKERJA di sini | semua kerja project terjadi di sini |
+
+Aturan batas:
+
+1. **Agent tidak pernah menulis PRD/tasks/tickets/progress di dalam factory.** Kalau diminta mengerjakan project tapi posisi ada di factory → BERHENTI, beri tahu owner untuk install dulu lalu panggil dari direktori project.
+2. Setiap agent (prd-writer, executor, reviewer) wajib menjalankan **Step 0 — Cek Batas** sebelum bekerja.
+3. **PR yang mengubah factory (sistem) hanya direview owner manusia**, bukan reviewer agent. Reviewer agent hanya berwenang atas PR task (`task/NNN-*`).
+
 ## Diagram Alur
 
 ```
